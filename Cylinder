@@ -1,0 +1,38 @@
+public class Cylinder
+{
+    double height;
+    Circle base;
+
+    public Cylinder()
+    {
+        height = 1;
+        base = new Circle(1);
+    }
+
+    public Cylinder(double r, Circle base)
+    {
+        height = 1;
+        base = new Circle(r);
+    }
+
+    public String toString()
+    {
+        return "Hello, I am a cylinder with height " + height + " and radius " + base.getRadius();
+    }
+
+    public double surfaceArea()
+    {
+        return base.area() * 2 + height * base.circumference();
+    }
+
+    public double getHeight()
+    {
+        double height;
+    }
+    public double getRadius(){
+        double radius;
+    }
+    public double volume(){
+        return (radius*radius*height)*1/3;
+    }
+}
