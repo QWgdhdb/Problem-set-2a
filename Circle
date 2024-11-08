@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class Circle
+{
+    public static void main(String[] args)
+    {
+        Scanner scanner = new Scanner(System.in);
+        Circle c1 = new Circle();
+        Circle c2 = new Circle(5);
+
+        System.out.println(c1);
+        System.out.println(c2);
+        System.out.println("getRadius() --> " + c1.getRadius() + " units");
+        System.out.println("getRadius() --> " + c2.getRadius() + " units");
+        System.out.println("circumference() --> " + c1.circumference() + " units");
+        System.out.println("circumference() --> " + c2.circumference() + " units");
+        System.out.println("area() --> " + c1.area() + " units");
+        System.out.println("area() --> " + c2.area() + " units");
+
+    }
+    double radius;
+
+    public Circle(){
+        //default constructor
+        radius = 1;
+    }
+    public Circle(double r){
+        radius = r;
+    }
+    public String toString(){
+        return "Hello, I am a circle with a radius of " + radius;
+    }
+    public double getRadius()
+    {
+        return radius;
+    }
+    public double circumference(){
+        return radius * 2 * Math.PI;
+    }
+    public double area(){
+        return radius * radius * Math.PI;
+    }
+
+
+}
